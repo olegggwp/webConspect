@@ -305,12 +305,31 @@ request.getSession есть и он работает через куки вау
 ## Catalina
 Tomcat на самом деле состоит из ряда компонентов, включая движок Tomcat JSP и множество различных разъемов, но его основной компонент называется Catalina. Catalina предоставляет фактическую реализацию спецификации сервлета Tomcat; когда вы запускаете свой сервер Tomcat, вы фактически запускаете Catalina
 # 4 лек
-freemarker
-шаблонизатор
-как работает (пример из нашего проекта)
-макросы
-функции
-аннотации
+## freemarker
+**Apache FreeMarker** is a _template engine_: a Java library to generate text output (HTML web pages, e-mails, configuration files, source code, etc.) based on templates and changing data.
+
+Templates are written in the FreeMarker Template Language (FTL), which is a simple, specialized language (not a full-blown programming language like PHP). Usually, a general-purpose programming language (like Java) is used to prepare the data (issue database queries, do business calculations). Then, Apache FreeMarker displays that prepared data using templates. In the template you are focusing on how to present the data, and outside the template you are focusing on what data to present.
+## шаблонизатор
+своими словами понятно
+## как работает (пример из нашего проекта)
+чтобы .ftlh-ки рендерились и т п создаем сервлет в котором прописываем путь к фтлш-кам , кодировку, то как шаблонный движок должен обрабатывать исключения (рекомендуется отдавать TemplateExceptionHandler.HTML_DEBUG_HANDLER)
+```
+TemplateExceptionHandler.HTML_DEBUG_HANDLER
+
+Template t = cfg.getTemplate(File file)
+
+template.process(Map data, response.getWriter()); -- рендер
+```
+и еще кладем всякие ключи-значения из реквеста в data
+
+## макросы
+это макросы =)
+## функции
+это функции
+## аннотации
+аннотации? вида 
+![[Pasted image 20240211185132.png]]
+-- подсказка для среды
 # 5+6 лек
 MVC
 схемки, примеры, описание реализации с 5 лекции
