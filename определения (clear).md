@@ -58,6 +58,7 @@ padding
 position
 поплавки
 normalize.css
+@media
 # 3 лек
 API
 war
@@ -134,3 +135,5 @@ spring core
 практика
 interceptor
 про ленивость
+#### реально не знал
+что в html означает тег template
