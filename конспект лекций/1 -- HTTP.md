@@ -12,7 +12,7 @@ https = http завернутый в tls чтобы шифровать (откр
 пользовательский user-agent посылает запрос "дай мне (или получи лот меня) такие то данные" -- и сервер отвечает(получает) этими данными
 
 ## HTTP
-![[Pasted image 20240206162502.png]]
+![[Pasted image 20240206162502.png|650]]
 TCP -- протокол с помощью которого сетевые интерфейсы взаимодействуют между собой устанавливая надежное (reliable-)соединение
 это делается трехвазным рукопожатием во время установки соединения -- небыстрая тема
 
@@ -33,9 +33,10 @@ TLS -- типа шифрованный TCP
 разделение клиент\\сервер есть не во всех протоколах
 
 stateless -- не интересует история
-**состояние закодировано в запросе** (вспоминаем reqest.getAttribute())
+**состояние закодировано в запросе** (вспоминаем session.getAttribute() )
 
 ## URI и URL
+https://ru.wikipedia.org/wiki/URI
 ![[Pasted image 20240206164730.png]]
 картинка -- **УРЛ**
 "унифицированный локатор ресурсов" , местоположение ресурсов в интернете
@@ -161,12 +162,27 @@ server push -- передача документов в клиент, иници
 **реверс-прокси, прокси-сервер**
 https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%BA%D1%81%D0%B8-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5
 TCP, 
-TLS -- протокол обеспечивающий защищенную (шифрованную) передачу данных между узлами в интернете
+**TLS** -- протокол обеспечивающий защищенную (шифрованную) передачу данных между узлами в интернете
 см сертификаты, центры сертификации
 
 трехфазное рукопожатие https://ru.wikipedia.org/wiki/TCP#%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D1%81%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F
 UDP, DNS
 отличия TCP и UDP
 keep-alive
-ssh, smtp
+ssh, **smtp**
 http3
+![What Is a Reverse Shell | Acunetix](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyWI3CNDH46o1GZe4CGomRUh7mEl-FEwgj2b2EWPWwYA&s)
+
+The user initiates a remote shell connection and the target system listens for such connections. With a reverse shell, the roles are opposite. It is the target machine that initiates the connection to the user, and the user's computer listens for incoming connections on a specified port.26 авг. 2019 г.
+
+[  
+
+### What Is a Reverse Shell - Acunetix
+
+
+acunetix.com
+
+https://www.acunetix.com › blog › web-security-zone
+](https://www.acunetix.com/blog/web-security-zone/what-is-reverse-shell/)
+
+Искать: [What is the difference between remote shell and reverse shell?](https://www.google.com/search?sca_esv=e96a0e7e0d01906d&sxsrf=ACQVn09ZCD-rCjF_3lL-N__CJneIdgSOMg:1708509011791&q=What+is+the+difference+between+remote+shell+and+reverse+shell%3F&sa=X&ved=2ahUKEwjV7PiFlLyEAxXEFxAIHe9iA7YQzmd6BAgfEAY)

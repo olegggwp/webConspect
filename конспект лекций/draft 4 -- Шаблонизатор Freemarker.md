@@ -1,7 +1,7 @@
 	шаболданизатор
-библиотека?
-
-тут как бы все понятно
+**Apache FreeMarker** is a _template engine_: a Java library to generate text output (HTML web pages, e-mails, configuration files, source code, etc.) based on templates and changing data.
+Templates are written in the FreeMarker Template Language (FTL), which is a simple, specialized language (not a full-blown programming language like PHP). Usually, a general-purpose programming language (like Java) is used to prepare the data (issue database queries, do business calculations). Then, Apache FreeMarker displays that prepared data using templates. In the template you are focusing on how to present the data, and outside the template you are focusing on what data to present.
+[отсюда](https://freemarker.apache.org/index.html)
 
 чтобы .ftlh-ки рендерились и т п создаем сервлет в котором прописываем путь к фтлш-кам , кодировку, то как шаблонный движок должен обрабатывать исключения (рекомендуется отдавать TemplateExceptionHandler.HTML_DEBUG_HANDLER)
 ```

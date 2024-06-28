@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "9207633e6437c287",
+    "type": "split",
+    "children": [
+      {
+        "id": "52682e2e6fda759c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c5397f1d71e2e2ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "конспект лекций/draft 9.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "54b865c2d4c9e4e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "c4a42e3157775b8f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "206b40a79339a3df",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a1d5513f568faedc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tcp",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "20b33c5e0c87c445",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "072233579051f935",
+    "type": "split",
+    "children": [
+      {
+        "id": "410a72a96bab8805",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac137dc8a5d84d71",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "конспект лекций/draft 9.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1e1540ec6b2dac58",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "конспект лекций/draft 9.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "19266d32fd43f4b3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e8854b300c90a99a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "конспект лекций/draft 9.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false
+    }
+  },
+  "active": "c5397f1d71e2e2ba",
+  "lastOpenFiles": [
+    "конспект лекций/draft 8 SPRING.md",
+    "конспект лекций/draft 10.md",
+    "конспект лекций/2 -- HTML + CSS.md",
+    "конспект лекций/draft 3 -- Maven, Servlet API, Tomcat.md",
+    "конспект лекций/draft 4 -- Шаблонизатор Freemarker.md",
+    "конспект лекций/1 -- HTTP.md",
+    "определения (clear).md",
+    "конспект лекций/яндекс гпт.md",
+    "конспект лекций/draft 7 jQuery, AJAX.md",
+    "конспект лекций/draft 6.md",
+    "конспект лекций/draft 5 MVC.md",
+    "определения фулл full.md",
+    "конспект лекций/draft 9.md",
+    "pdfs/draft 10.pdf",
+    "pdfs/draft 9.pdf",
+    "pdfs/draft 8 SPRING.pdf",
+    "pdfs/draft 7 jQuery, AJAX.pdf",
+    "pdfs/draft 6.pdf",
+    "pdfs/draft 5 MVC.pdf",
+    "pdfs/draft 4 -- Шаблонизатор Freemarker.pdf",
+    "pdfs/draft 3 -- Maven, Servlet API, Tomcat.pdf",
+    "pdfs/2 -- HTML + CSS.pdf",
+    "pdfs/1 -- HTTP.pdf",
+    "imgs/Pasted image 20240310150507.png",
+    "imgs/Pasted image 20240310150458.png",
+    "imgs/Pasted image 20240310143933.png",
+    "imgs/Pasted image 20240310143911.png",
+    "конспект лекций/imgs/Pasted image 20240308151135.png",
+    "конспект лекций/imgs/Pasted image 20240308150831.png",
+    "конспект лекций/imgs/Pasted image 20240308150736.png",
+    "конспект лекций/imgs/Pasted image 20240308150006.png",
+    "конспект лекций/imgs/Pasted image 20240308145954.png",
+    "конспект лекций/imgs/Pasted image 20240308145743.png",
+    "конспект лекций/о чем почитать.md",
+    "Untitled.md",
+    "README.md"
+  ]
+}
