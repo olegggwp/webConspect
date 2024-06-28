@@ -101,6 +101,28 @@ transport layer security — Протокол защиты транспортн
 кип-элайвы не бесконечны -- обычно 10ки-100ни секунд
 ## stateless в контексте http
 понятно что, сказать про куки и сессии
+## куки cookie
+Получив HTTP-запрос, вместе с ответом сервер может отправить заголовок [`Set-Cookie`](https://developer.mozilla.org/ru/docs/Web/HTTP/Headers/Set-Cookie). Куки обычно запоминаются браузером и посылаются в HTTP-заголовке [`Cookie` (en-US)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie "Currently only available in English (US)") с каждым новым запросом к одному и тому же серверу. Можно задать срок действия кук, а также срок их жизни, после которого куки не будут отправляться. Также можно указать ограничения на путь и домен, то есть указать, в течении какого времени и к какому сайту они будут отсылаться.
+
+Заголовок [`Set-Cookie`](https://developer.mozilla.org/ru/docs/Web/HTTP/Headers/Set-Cookie) HTTP-ответа используется для отправки куки с сервера в клиентское приложение (браузер). Простой куки может задаваться так:
+
+Set-Cookie: <имя-куки>=<заголовок-куки>
+
+Этот заголовок с сервера даёт клиенту указание сохранить куки (это делают, например, [PHP](http://php.net/manual/en/function.setcookie.php), [Node.js](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_response_setheader_name_value), [Python](https://docs.python.org/3/library/http.cookies.html) и [Ruby on Rails](http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html)). Ответ, отправляемый браузеру, содержит заголовок `Set-Cookie`, и куки запоминается браузером.
+
+HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: yummy_cookie=choco
+Set-Cookie: tasty_cookie=strawberry
+
+
+Теперь с каждым новым запросом к серверу при помощи заголовка [`Cookie` (en-US)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cookie "Currently only available in English (US)") браузер будет возвращать серверу все сохранённые ранее куки.
+
+GET /sample_page.html HTTP/1.1
+Host: www.example.org
+Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+## cookie HTTPonly
+Куки HTTPonly не доступны из JavaScript через свойства [`Document.cookie`](https://developer.mozilla.org/ru/docs/Web/API/Document/cookie) API, что помогает избежать межсайтового скриптинга ([XSS (en-US)](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting "Currently only available in English (US)")). Устанавливайте этот флаг для тех кук, к которым не требуется обращаться через JavaScript. В частности, если куки используются только для поддержки сеанса, то в JavaScript они не нужны, так что в этом случае следует устанавливать флаг `HttpOnly`.
 ## session
 есть куки на сервере хранится мапа называем сессией
 
@@ -259,7 +281,7 @@ p : { } -- все теги <p>
 есть два пути:
 1. ресетнуть нахуй все
 2. сделать нормалайз -- сбросить стили до нормального одинакового четкого значения во всех браузерах
-#непонел 
+#понел 
 
 допилить:
 нормалайз
@@ -447,3 +469,79 @@ interceptor
 про ленивость
 #### реально не знал
 что в html означает тег template
+
+# лек 10
+## как связаны node.js и vue.js
+???
+## шина событий
+**моими словами** : 
+Шина событий позволяет осуществлять обмен данными между компонентами с помощью механизма публикации и подписки, при котором компоненты могут явно не взаимодействовать друг с другом. 
+
+
+в шину событий кидаем событие
+а другой компонент подписан на эти события
+компоненты ничего не знают друг о друге -- в этом изюминка
+частый архитектурный паттерн для слабо-связных приложений
+
+### отступление 
+когда мы нажали на ссылку и поменяли значение page:
+этот факт изменения страницы произошел в одном компоненте а нам нужно передать его (факт) в другой компонент
+есть 2 метода
+1. текущую страницу делаем частью наших общих пошаренных данных, меняем пошаренные данные и компоненты их использующие автоматически перерисовываются
+2. использование шины событий
+## $emit
+With the built-in **`$emit()`** method in Vue we can create a custom event in the child component that can be captured in the parent element.
+
+Props are used to send data from the parent element to the child component, and **`$emit()`** is used to do the oposite: to pass information from the child component to the parent.
+
+## v-on
+## v-model
+ну он связал переменную login из data с инпутом с именем и id login 
+и теперь если менется состояние инпута то меняется состояние переменной
+вставим два таких инпута -- когда будем писать в одном в другом будет отражаться сразу же
+"УУУ ВЬЮ ДЖС ОЧЕНЬ ХИТРО УСТРОЕН САМ ПОНИМАЕТ ЧТО НУЖНО ПЕРЕРИСОВЫВАТЬ ОТ КАКИХ ДАННЫХ УУУ"
+## куда и как вставляется js код
+
+## обработчики как работают
+@ по английски это "at" поэтому интуитивно понятно
+эт клик
+## Data Binding (Привязка данных)
+# 11
+## jwt
+JSON Web Token
+открытый стандарт для создания токенов доступа, основанный на формате JSON. Как правило, используется для передачи данных для аутентификации в клиент-серверных приложениях
+
+JSON Web Token (JWT) is an open standard ([RFC 7519](https://tools.ietf.org/html/rfc7519)) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the **HMAC** algorithm) or a public/private key pair using **RSA** or **ECDSA**.
+
+https://jwt.io/introduction
+
+## rest
+методология : как могут общаться клиент и сервер
+query параметры
+обращаемся к сущностям (не точно как в домене)
+хэд
+пост -- на изменение -- отправляем новую сущность
+пут -- присвоение
+патач - частичное присвоение
+делит
+четкая система url-ов (по юзерс получаем юзеров, по постс/17 получаем 17й пост, каждой сущности соотв своя подпапка из урлов 
+Типа /contests/17/problems/a все логично)
+Доп семантику добавляем и в статусные коды ответов
+По нашей идеологии бек спрятан под /api
+
+/1 для обратной совместимости (версии api)
+конвеншн
+сервер не хранит состояние клиента -- нет сессии
+идемпотентный
+
+## идемпотентность метода
+
+## Библиотечка axios для vue – уточнить
+## spring boot и spring mvc
+
+## spring аннотации
+аннотации controller 
+
+объекты в сприге это бины, лежат в контексте
+
+## ORM
